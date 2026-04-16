@@ -6,6 +6,7 @@ import { QuizInputPage } from './components/QuizInputPage'
 import { PlayRoute } from './components/PlayRoute'
 import { ResultRoute } from './components/ResultRoute'
 import { SavedQuizRoute } from './components/SavedQuizRoute'
+import { EditQuizPage } from './components/EditQuizPage'
 
 export default function App() {
   return (
@@ -18,9 +19,11 @@ export default function App() {
           <Route path="/play" element={<PlayRoute />} />
           <Route path="/result" element={<ResultRoute />} />
           <Route path="/saved/:id" element={<SavedQuizRoute />} />
+          <Route path="/edit/:id" element={<EditQuizPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </QuizFlowProvider>
   )
 }
+

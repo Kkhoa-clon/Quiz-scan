@@ -1,6 +1,6 @@
 # QuizScan
 
-Ứng dụng quét và xử lý đề thi trắc nghiệm từ ảnh.
+Ứng dụng xử lý và chơi đề thi trắc nghiệm.
 
 ## Cài đặt
 
@@ -8,51 +8,67 @@
 npm install
 ```
 
-## Chạy
+## Chạy ứng dụng
 
 ```bash
-# Development
+# Development (mở http://localhost:5173)
 npm run dev
 
-# Build
+# Build production
 npm run build
 
-# Preview build
+# Preview build local
 npm run preview
 ```
 
 ## Cấu hình
 
-### OCR API Token (thay thế Tesseract OCR)
+### Ollama (khuyến nghị - thay thế OCR)
 
-Để sử dụng API OCR layout parsing thay vì Tesseract OCR:
+Cài đặt [Ollama](https://ollama.ai/) để xử lý ảnh đề thi bằng Vision (llama3.2-vision), chuẩn hóa văn bản, tách câu hỏi và chấm điểm.
 
-1. Tạo file `.env` trong thư mục gốc dự án (copy từ `.env.example`)
-2. Thêm token API của bạn:
+```bash
+# Cài model Vision chính
+ollama pull llama3.2-vision
 
-```env
-VITE_API_KEY=YOUR_API_KEY_HERE
+# Model text backup (nếu cần)
+ollama pull qwen2.5-coder:3b
 ```
 
-3. Lấy token từ nhà cung cấp OCR mà dự án đang sử dụng.
-
-Nếu không có token, ứng dụng sẽ báo lỗi và không chuyển ảnh thành văn bản.
-
-### Ollama (tuỳ chọn)
-
-Cài đặt [Ollama](https://ollama.ai/) để sử dụng AI cho chuẩn hóa văn bản và chấm đáp án.
+Tạo `.env` (copy `.env.example` nếu có):
 
 ```env
 OLLAMA_HOST=http://127.0.0.1:11434
 ```
 
-## Tính năng
 
-- Quét ảnh đề thi trắc nghiệm
-- Trích xuất văn bản bằng OCR API hoặc Ollama Vision
-- Chuẩn hóa và tách câu hỏi
-- Chấm đáp án với giải thích (nếu có Ollama)
-- Lưu quiz để chơi lại
+## Tính năng chính
+
+- **Tạo bài kiểm tra** từ ảnh chụp đề thi (Ollama Vision), file ảnh, hoặc nhập văn bản thủ công
+- **Phân tích tự động**: Trích xuất câu hỏi, đáp án, đáp án đúng bằng AI
+- **Chơi bài kiểm tra** với timer, theo dõi tiến độ
+- **Chấm điểm tự động** kèm giải thích chi tiết
+- **Lưu & quản lý bài kiểm tra**:
+  - Xem lịch sử các bài đã lưu
+  - **Xóa bài kiểm tra** không cần thiết
+  - **Chỉnh sửa bài kiểm tra**: Sửa lỗi AI bằng cách chỉnh câu hỏi, đáp án A/B/C/D, đáp án đúng
+- **Xem kết quả** chi tiết với phân tích điểm mạnh/yếu
+
+## Luồng sử dụng
+
+1. Chụp ảnh đề thi → Upload → AI phân tích → Xem trước → Lưu
+2. Vào **Lịch sử** → Chọn bài → **Chơi lại** hoặc **Chỉnh sửa**
+3. Hoàn thành → Xem **Kết quả** → Lưu kết quả mới
+
+## Dữ liệu
+
+Bài kiểm tra lưu dạng JSON trong `data/quizzes/`. Backup thủ công nếu cần.
+
+## Troubleshooting
+
+- **Ollama không kết nối**: Kiểm tra `ollama serve` đang chạy và model đã pull.
+- **Lỗi phân tích**: Thử model khác trong app hoặc chỉnh sửa thủ công sau.
+
 
 export default defineConfig([
   globalIgnores(['dist']),

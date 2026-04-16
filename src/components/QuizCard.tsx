@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { QuizDoc } from '../lib/types'
+import { useQuizzes } from '../hooks/useQuizzes'
 
 interface QuizCardProps {
   quiz: QuizDoc
@@ -13,19 +14,23 @@ function formatDate(iso: string) {
       year: 'numeric',
     }).format(new Date(iso))
   } catch {
-    return iso
+    return iso.slice(0, 10)
   }
 }
 
 export function QuizCard({ quiz }: QuizCardProps) {
+  const { deleteQuiz } = useQuizzes()
   const thumb = quiz.imageUrl
   const subtitle = `${quiz.totalQuestions} câu · ${quiz.score}/${quiz.totalQuestions} điểm`
 
+  const handleDelete = () => {
+    if (confirm('Xóa bài kiểm tra này? Không thể hoàn tác.')) {
+      deleteQuiz(quiz.id)
+    }
+  }
+
   return (
-    <Link
-      to={`/saved/${quiz.id}`}
-      className="flex gap-4 rounded-3xl border border-gray-200 bg-white p-4 text-left shadow-sm transition hover:shadow-lg"
-    >
+    <div className="group flex gap-4 rounded-3xl border border-gray-200 bg-white p-4 shadow-sm hover:shadow-lg transition-all">
       <div className="h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-gray-100">
         {thumb ? (
           <img src={thumb} alt="" className="h-full w-full object-cover" />
@@ -38,6 +43,27 @@ export function QuizCard({ quiz }: QuizCardProps) {
         <p className="mt-1 text-sm text-gray-500">{formatDate(quiz.createdAt)}</p>
         <p className="mt-1 text-sm font-medium text-[#3B82F6]">{subtitle}</p>
       </div>
-    </Link>
+      <div className="flex flex-col gap-2 ml-2">
+        <Link
+          to={`/saved/${quiz.id}`}
+          className="px-3 py-1.5 text-xs font-medium text-blue-600 hover:text-blue-700 bg-blue-50 rounded-lg hover:bg-blue-100 whitespace-nowrap"
+        >
+          Chơi
+        </Link>
+        <Link
+          to={`/edit/${quiz.id}`}
+          className="px-3 py-1.5 text-xs font-medium text-green-600 hover:text-green-700 bg-green-50 rounded-lg hover:bg-green-100 whitespace-nowrap"
+        >
+          Sửa
+        </Link>
+        <button
+          onClick={handleDelete}
+          className="px-3 py-1.5 text-xs font-medium text-red-600 hover:text-red-700 bg-red-50 rounded-lg hover:bg-red-100"
+        >
+          Xóa
+        </button>
+      </div>
+    </div>
   )
 }
+

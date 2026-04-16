@@ -1,0 +1,141 @@
+{
+  "id": "9df602e2-9302-4d47-9591-0f1501695412",
+  "userId": "local",
+  "imageUrl": null,
+  "title": "Đề trắc nghiệm",
+  "createdAt": "2026-04-16T14:55:54.049Z",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Trong Python, từ khóa dùng để khai báo hàm là gì?",
+      "options": {
+        "A": "def",
+        "B": "function",
+        "C": "func",
+        "D": "define"
+      },
+      "correct": "A",
+      "explanation": "Trong Python, từ khóa 'def' được sử dụng để khai báo hàm. Kết luận: A.",
+      "userAnswer": null
+    },
+    {
+      "id": 2,
+      "question": "Giá trị của biểu thức 2 ** 3 trong Python là gì?",
+      "options": {
+        "A": "8",
+        "B": "6",
+        "C": "9",
+        "D": "5"
+      },
+      "correct": "A",
+      "explanation": "Biểu thức 2 ** 3 trong Python tính toán 2 mũ 3 = 8. Kết luận: A.",
+      "userAnswer": null
+    },
+    {
+      "id": 3,
+      "question": "Kiểu dữ liệu nào sau đây là kiểu số nguyên trong Python?",
+      "options": {
+        "A": "int",
+        "B": "str",
+        "C": "float",
+        "D": "bool"
+      },
+      "correct": "A",
+      "explanation": "Kiểu dữ liệu 'int' trong Python đại diện cho số nguyên. Kết luận: A.",
+      "userAnswer": null
+    },
+    {
+      "id": 4,
+      "question": "Hàm nào dùng để in dữ liệu ra màn hình trong Python?",
+      "options": {
+        "A": "print()",
+        "B": "input()",
+        "C": "display()",
+        "D": "show()"
+      },
+      "correct": "A",
+      "explanation": "Hàm 'print()' được sử dụng để in dữ liệu ra màn hình trong Python. Kết luận: A.",
+      "userAnswer": null
+    },
+    {
+      "id": 5,
+      "question": "Toán tử nào dùng để so sánh bằng trong Python?",
+      "options": {
+        "A": "==",
+        "B": "=",
+        "C": "!=",
+        "D": ">="
+      },
+      "correct": "A",
+      "explanation": "Toán tử '==' được sử dụng để so sánh bằng trong Python. Kết luận: A.",
+      "userAnswer": null
+    },
+    {
+      "id": 6,
+      "question": "Câu 6: Danh sách (list) trong Python được khai báo bằng dấu nào?",
+      "options": {
+        "A": "[]",
+        "B": "{ }",
+        "C": "()",
+        "D": "<>"
+      },
+      "correct": "A",
+      "explanation": "Danh sách (list) trong Python được khai báo bằng dấu ngoặc vuông []. Kết luận: A.",
+      "userAnswer": null
+    },
+    {
+      "id": 7,
+      "question": "Câu 7: Hàm nào dùng để nhập dữ liệu từ bàn phím?",
+      "options": {
+        "A": "input()",
+        "B": "scan()",
+        "C": "read()",
+        "D": "get()"
+      },
+      "correct": "A",
+      "explanation": "Hàm 'input()' được sử dụng để nhập dữ liệu từ bàn phím. Kết luận: A.",
+      "userAnswer": null
+    },
+    {
+      "id": 8,
+      "question": "Kết quả của len(\"Python\") là gì?",
+      "options": {
+        "A": "6",
+        "B": "5",
+        "C": "7",
+        "D": "4"
+      },
+      "correct": "A",
+      "explanation": "Kết quả của len(\"Python\") là 6 vì có 6 ký tự trong chuỗi. Kết luận: A.",
+      "userAnswer": null
+    },
+    {
+      "id": 9,
+      "question": "Câu 9: Từ khóa nào dùng để lặp trong Python?",
+      "options": {
+        "A": "for",
+        "B": "loop",
+        "C": "iterate",
+        "D": "repeat"
+      },
+      "correct": "A",
+      "explanation": "Trong Python, từ khóa 'for' được sử dụng để lặp. Kết luận: A.",
+      "userAnswer": null
+    },
+    {
+      "id": 10,
+      "question": "Kiểu dữ liệu nào chỉ có hai giá trị True/False?",
+      "options": {
+        "A": "bool",
+        "B": "int",
+        "C": "str",
+        "D": "list"
+      },
+      "correct": "A",
+      "explanation": "Kiểu dữ liệu 'bool' chỉ có hai giá trị True/False. Kết luận: A.",
+      "userAnswer": null
+    }
+  ],
+  "score": 0,
+  "totalQuestions": 10
+}
