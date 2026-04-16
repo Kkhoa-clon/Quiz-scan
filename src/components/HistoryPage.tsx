@@ -4,38 +4,7 @@ import { QuizCard } from './QuizCard'
 import { useQuizzes } from '../hooks/useQuizzes'
 
 export function HistoryPage() {
-  const { items, loading, error, refresh, deleteQuiz } = useQuizzes()
-  const [selectedIds, setSelectedIds] = useState<string[]>([])
-  const selectedCount = selectedIds.length
-
-  const toggleSelect = (id: string, checked: boolean) => {
-    setSelectedIds(prev => 
-      checked ? [...prev, id] : prev.filter(i => i !== id)
-    )
-  }
-
-  const toggleSelectAll = (checked: boolean) => {
-    if (checked) {
-      setSelectedIds(items.map(q => q.id))
-    } else {
-      setSelectedIds([])
-    }
-  }
-
-  const handleDeleteSelected = async () => {
-    if (!selectedCount) return
-    if (!confirm(`Xóa ${selectedCount} bài kiểm tra? Không thể hoàn tác.`)) return
-    try {
-      await Promise.all(selectedIds.map(id => deleteQuiz(id)))
-      setSelectedIds([])
-      refresh()
-    } catch (e) {
-      alert('Lỗi xóa một số bài')
-      refresh()
-    }
-  }
-
-  const clearSelection = () => setSelectedIds([])
+  const { items, loading, error, refresh } = useQuizzes()
 
   if (loading) return <div className="p-8 text-center text-gray-500">Đang tải...</div>
 
@@ -64,51 +33,12 @@ export function HistoryPage() {
         </div>
       ) : null}
 
-      {selectedCount > 0 && (
-        <div className="mb-4 rounded-2xl bg-blue-50 px-4 py-3 border border-blue-200">
-          <div className="flex items-center gap-3 text-sm">
-            <input
-              id="select-all"
-              type="checkbox"
-              checked={selectedCount === items.length}
-              onChange={(e) => toggleSelectAll(e.target.checked)}
-              className="rounded border-blue-300 text-blue-600"
-            />
-            <label htmlFor="select-all" className="font-medium text-blue-900 cursor-pointer">
-              Đã chọn {selectedCount}/{items.length}
-            </label>
-            <button
-              onClick={handleDeleteSelected}
-              className="ml-auto rounded-xl bg-red-500 px-3 py-1 text-white text-sm font-medium hover:bg-red-600"
-            >
-              Xóa {selectedCount}
-            </button>
-            <button
-              onClick={clearSelection}
-              className="text-sm text-gray-600 hover:text-gray-900 underline"
-            >
-              Hủy
-            </button>
-          </div>
-        </div>
-      )}
-
       {items.length === 0 ? (
         <p className="text-gray-500">Chưa có bài kiểm tra nào. Tạo bài mới từ trang chủ.</p>
       ) : (
         <div className="space-y-3">
           {items.map((q) => (
-            <label key={q.id} className="flex items-start gap-3 p-1 cursor-pointer group">
-              <input
-                type="checkbox"
-                checked={selectedIds.includes(q.id)}
-                onChange={(e) => toggleSelect(q.id, e.target.checked)}
-                className="mt-1 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 mt-0.5"
-              />
-              <div className="flex-1">
-                <QuizCard quiz={q} />
-              </div>
-            </label>
+            <QuizCard key={q.id} quiz={q} />
           ))}
         </div>
       )}

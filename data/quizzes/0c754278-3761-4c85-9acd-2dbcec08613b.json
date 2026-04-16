@@ -1,9 +1,9 @@
 {
-  "id": "9df602e2-9302-4d47-9591-0f1501695412",
+  "id": "0c754278-3761-4c85-9acd-2dbcec08613b",
   "userId": "local",
   "imageUrl": null,
   "title": "Đề trắc nghiệm",
-  "createdAt": "2026-04-16T14:55:54.049Z",
+  "createdAt": "2026-04-16T19:34:54.982Z",
   "questions": [
     {
       "id": 1,
@@ -15,8 +15,9 @@
         "D": "define"
       },
       "correct": "A",
-      "explanation": "Trong Python, từ khóa 'def' được sử dụng để khai báo hàm. Kết luận: A.",
-      "userAnswer": null
+      "explanation": "Trong Python, từ khóa dùng để khai báo hàm là def. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
     },
     {
       "id": 2,
@@ -28,8 +29,9 @@
         "D": "5"
       },
       "correct": "A",
-      "explanation": "Biểu thức 2 ** 3 trong Python tính toán 2 mũ 3 = 8. Kết luận: A.",
-      "userAnswer": null
+      "explanation": "Giá trị của biểu thức 2 ** 3 trong Python là 8. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
     },
     {
       "id": 3,
@@ -41,8 +43,9 @@
         "D": "bool"
       },
       "correct": "A",
-      "explanation": "Kiểu dữ liệu 'int' trong Python đại diện cho số nguyên. Kết luận: A.",
-      "userAnswer": null
+      "explanation": "Kiểu dữ liệu int là kiểu số nguyên trong Python. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
     },
     {
       "id": 4,
@@ -54,8 +57,9 @@
         "D": "show()"
       },
       "correct": "A",
-      "explanation": "Hàm 'print()' được sử dụng để in dữ liệu ra màn hình trong Python. Kết luận: A.",
-      "userAnswer": null
+      "explanation": "Hàm print() dùng để in dữ liệu ra màn hình trong Python. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
     },
     {
       "id": 5,
@@ -67,25 +71,27 @@
         "D": ">="
       },
       "correct": "A",
-      "explanation": "Toán tử '==' được sử dụng để so sánh bằng trong Python. Kết luận: A.",
-      "userAnswer": null
+      "explanation": "Toán tử == dùng để so sánh bằng trong Python. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
     },
     {
       "id": 6,
       "question": "Câu 6: Danh sách (list) trong Python được khai báo bằng dấu nào?",
       "options": {
         "A": "[]",
-        "B": "{ }",
+        "B": "{}",
         "C": "()",
         "D": "<>"
       },
       "correct": "A",
-      "explanation": "Danh sách (list) trong Python được khai báo bằng dấu ngoặc vuông []. Kết luận: A.",
-      "userAnswer": null
+      "explanation": "Danh sách (list) trong Python được khai báo bằng dấu []. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
     },
     {
       "id": 7,
-      "question": "Câu 7: Hàm nào dùng để nhập dữ liệu từ bàn phím?",
+      "question": "Hàm nào dùng để nhập dữ liệu từ bàn phím?",
       "options": {
         "A": "input()",
         "B": "scan()",
@@ -93,25 +99,27 @@
         "D": "get()"
       },
       "correct": "A",
-      "explanation": "Hàm 'input()' được sử dụng để nhập dữ liệu từ bàn phím. Kết luận: A.",
-      "userAnswer": null
+      "explanation": "Hàm input() dùng để nhập dữ liệu từ bàn phím. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
     },
     {
       "id": 8,
-      "question": "Kết quả của len(\"Python\") là gì?",
+      "question": "Kết quả của len(",
       "options": {
         "A": "6",
         "B": "5",
         "C": "7",
         "D": "4"
       },
-      "correct": "A",
-      "explanation": "Kết quả của len(\"Python\") là 6 vì có 6 ký tự trong chuỗi. Kết luận: A.",
-      "userAnswer": null
+      "correct": "B",
+      "explanation": "Kết quả của len(",
+      "userAnswer": null,
+      "isCorrect": false
     },
     {
       "id": 9,
-      "question": "Câu 9: Từ khóa nào dùng để lặp trong Python?",
+      "question": "Từ khóa nào dùng để lặp trong Python?",
       "options": {
         "A": "for",
         "B": "loop",
@@ -119,8 +127,9 @@
         "D": "repeat"
       },
       "correct": "A",
-      "explanation": "Trong Python, từ khóa 'for' được sử dụng để lặp. Kết luận: A.",
-      "userAnswer": null
+      "explanation": "Trong Python, từ khóa lặp thường được sử dụng là for. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
     },
     {
       "id": 10,
@@ -132,8 +141,9 @@
         "D": "list"
       },
       "correct": "A",
-      "explanation": "Kiểu dữ liệu 'bool' chỉ có hai giá trị True/False. Kết luận: A.",
-      "userAnswer": null
+      "explanation": "Kiểu dữ liệu bool chỉ có hai giá trị True/False. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
     }
   ],
   "score": 0,

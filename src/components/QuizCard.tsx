@@ -19,15 +19,8 @@ function formatDate(iso: string) {
 }
 
 export function QuizCard({ quiz }: QuizCardProps) {
-  const { deleteQuiz } = useQuizzes()
   const thumb = quiz.imageUrl
   const subtitle = `${quiz.totalQuestions} câu · ${quiz.score}/${quiz.totalQuestions} điểm`
-
-  const handleDelete = () => {
-    if (confirm('Xóa bài kiểm tra này? Không thể hoàn tác.')) {
-      deleteQuiz(quiz.id)
-    }
-  }
 
   return (
     <div className="group flex gap-4 rounded-3xl border border-gray-200 bg-white p-4 shadow-sm hover:shadow-lg transition-all">
@@ -56,12 +49,6 @@ export function QuizCard({ quiz }: QuizCardProps) {
         >
           Sửa
         </Link>
-        <button
-          onClick={handleDelete}
-          className="px-3 py-1.5 text-xs font-medium text-red-600 hover:text-red-700 bg-red-50 rounded-lg hover:bg-red-100"
-        >
-          Xóa
-        </button>
       </div>
     </div>
   )

@@ -13,16 +13,6 @@ async function apiGet<T>(path: string): Promise<T> {
   return r.json() as Promise<T>
 }
 
-async function apiDelete(path: string): Promise<void> {
-  const r = await apiRequest(path, {
-    method: 'DELETE',
-  })
-  if (!r.ok) {
-    const t = await r.text()
-    throw new Error(t || r.statusText || `HTTP ${r.status}`)
-  }
-}
-
 async function apiPut(path: string, body: unknown): Promise<void> {
   const r = await apiRequest(path, {
     method: 'PUT',
@@ -70,10 +60,6 @@ export async function getQuizById(id: string): Promise<QuizDoc | null> {
   }
 }
 
-export async function deleteQuiz(id: string): Promise<void> {
-  await apiDelete(`/quizzes/${encodeURIComponent(id)}`)
-}
-
 export async function updateQuiz(id: string, quiz: QuizDoc): Promise<void> {
   await apiPut(`/quizzes/${encodeURIComponent(id)}`, { quiz })
 }
@@ -89,5 +75,4 @@ export async function saveQuiz(
 }
 
 export { payloadToQuiz }
-
 

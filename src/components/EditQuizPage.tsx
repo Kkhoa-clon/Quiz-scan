@@ -60,11 +60,6 @@ export function EditQuizPage() {
     setQuestions(prev => [...prev, newQ])
   }, [questions.length])
 
-  const deleteQuestion = useCallback((qIndex: number) => {
-    if (!confirm('Xóa câu hỏi này?')) return
-    setQuestions(prev => prev.filter((_, i) => i !== qIndex).map((q, i) => ({ ...q, id: i + 1 })))
-  }, [])
-
   const handleSave = useCallback(async () => {
     if (!id || !quiz) return
     if (!title.trim()) {
@@ -106,7 +101,7 @@ export function EditQuizPage() {
         </Link>
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Chỉnh sửa bài kiểm tra</h1>
-          <p className="text-gray-500">Sửa lỗi AI, thêm/xóa câu hỏi</p>
+          <p className="text-gray-500">Sửa lỗi AI, thêm câu hỏi</p>
         </div>
       </header>
 
@@ -142,12 +137,6 @@ export function EditQuizPage() {
               <div key={q.id} className="border border-gray-200 rounded-2xl p-6 bg-white hover:shadow-md">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-semibold text-gray-900">Câu {q.id}</h3>
-                  <button
-                    onClick={() => deleteQuestion(index)}
-                    className="text-red-500 hover:text-red-700 font-medium text-sm"
-                  >
-                    Xóa câu
-                  </button>
                 </div>
                 
                 <div className="space-y-4">

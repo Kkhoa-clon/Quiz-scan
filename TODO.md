@@ -1,18 +1,20 @@
-# Implement Quiz Management Features + Fix PDF
+## TODO: Remove Delete Feature
 
-**Status**: Complete! PDF fixed, delete/edit implemented.
+✅ **Plan approved by user.**
 
-## Steps:
-- [x] Gather files + create plan/confirm
-- [x] 1. Fix PDF extraction ✅ Debug logs + workerSrc + error handling
-- [x] 2. quizStorage.ts APIs: deleteQuiz/updateQuiz ✅
-- [x] 3. useQuizzes.ts deleteQuiz handler ✅ Confirm + optimistic
-- [x] 4. HistoryPage.tsx multi-select delete ✅ Checkboxes, select-all, bulk/single delete
-- [x] 5. App.tsx route /edit/:id ✅
-- [x] 6. EditQuizPage.tsx full editor ✅ Edit all fields + add/remove questions + save/play
-- [x] 7. README.md updated features ✅ Multi-delete, full edit
-- [x] 8. TS clean, ready to test
+**Pending Steps:**
+## COMPLETED: Delete Feature Removed
 
-**Next**: `npm run dev` → Test PDF upload, create quiz, /history → select/delete multi, /edit/:id → edit/save/add/remove, play preview.
+✅ **All edits done per plan.**
 
-All features implemented per request!
+**Updated Steps:**
+1. ✅ Created TODO.md
+2. ✅ src/lib/quizStorage.ts: Removed apiDelete + deleteQuiz
+3. ✅ src/hooks/useQuizzes.ts: Removed deleteQuiz
+4. ✅ src/components/QuizCard.tsx: Removed handleDelete/useQuizzes destructuring/"Xóa" button
+5. ✅ src/components/HistoryPage.tsx: Removed bulk delete/checkboxes/select logic/UI
+6. ✅ src/components/EditQuizPage.tsx: Removed deleteQuestion/"Xóa câu" buttons, updated subtitle text
+
+**Test Recommendation:** `npm run dev` → Navigate to /history (simple list, no checkboxes/delete), click QuizCard (Chơi/Sửa only), /edit/:id (questions w/o delete/add only).
+
+No errors expected. Feature fully removed.
