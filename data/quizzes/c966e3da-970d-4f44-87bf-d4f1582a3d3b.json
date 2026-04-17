@@ -1,0 +1,711 @@
+{
+  "id": "c966e3da-970d-4f44-87bf-d4f1582a3d3b",
+  "userId": "local",
+  "imageUrl": null,
+  "title": "Đề trắc nghiệm",
+  "createdAt": "2026-04-17T05:37:33.311Z",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Trong thí nghiệm của Martinus Beijerinck, vì sao dịch lọc (số 2) không chứa vi khuẩn?",
+      "options": {
+        "A": "Màng lọc đã lọc hết vi khuẩn.",
+        "B": "Lúc chiết xuất đã làm tan hết vi khuẩn.",
+        "C": "Trong dịch chiết xuất vốn không hề có vi khuẩn.",
+        "D": "Vi khuẩn đã bị chết hết lúc làm chiết xuất."
+      },
+      "correct": "A",
+      "explanation": "Trong thí nghiệm của Martinus Beijerinck, dịch lọc (số 2) không chứa vi khuẩn vì màn lọc đã lọc hết vi khuẩn. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 2,
+      "question": "Trong thí nghiệm của Martinus Beijerinck, dù dịch lọc không có vi khuẩn, nhưng cây thuốc lá khoẻ mạnh vẫn bị nhiễm bệnh là vì",
+      "options": {
+        "A": "dịch lọc chứa cấu trúc nhỏ hơn cả vi khuẩn.",
+        "B": "cây nhiễm sẵn bệnh nhưng chưa biểu hiện.",
+        "C": "dịch lọc bị nhiễm vi khuẩn trong quá trình lọc.",
+        "D": "dịch chiết bị nhiễm độc trong lúc thu mẫu."
+      },
+      "correct": "B",
+      "explanation": "Trong thí nghiệm của Martinus Beijerinck, dù dịch lọc không có vi khuẩn, nhưng cây thuốc lá khoẻ mạnh vẫn bị nhiễm bệnh là vì cây nhiễm sẵn bệnh nhưng chưa biểu hiện. Kết luận: B.",
+      "userAnswer": "A",
+      "isCorrect": false
+    },
+    {
+      "id": 3,
+      "question": "Câu 3. Virus nào sau đây được phát hiện đầu tiên?",
+      "options": {
+        "A": "Virus gây bệnh viêm gan",
+        "B": "Virus gây bệnh dại.",
+        "C": "Virus gây bệnh khảm thuốc lá.",
+        "D": "Virus gây bệnh sởi."
+      },
+      "correct": "D",
+      "explanation": "Virus gây bệnh sởi được phát hiện đầu tiên. Kết luận: D.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 4,
+      "question": "Hình thức sống của virus là gì?",
+      "options": {
+        "A": "Sống kí sinh không bắt buộc.",
+        "B": "Sống tự dưỡng kiểu quang hợp.",
+        "C": "Sống cộng sinh với tế bào.",
+        "D": "Sống kí sinh nội bào bắt buộc"
+      },
+      "correct": "D",
+      "explanation": "Hình thức sống của virus là sống kí sinh nội bào bắt buộc. Kết luận: D.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 5,
+      "question": "Vì sao virus không được xem là một thực thể sống hoàn chỉnh?",
+      "options": {
+        "A": "Do virus sống kí sinh nội bào.",
+        "B": "Do virus không có cấu tạo tế bào.",
+        "C": "Do virus không có hệ enzyme riêng.",
+        "D": "Do virus có kích thước quá nhỏ bé."
+      },
+      "correct": "B",
+      "explanation": "Virus không được xem là một thực thể sống hoàn chỉnh vì không có cấu tạo tế bào. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 6,
+      "question": "Virus là một dạng sống kí sinh nội bào bắt buộc vì",
+      "options": {
+        "A": "Không có DNA hoặc RNA nên không thể sinh tổng hợp các chất cần thiết cho cơ thể.",
+        "B": "Cấu tạo đơn bào nên không thể sinh trưởng và phát triển như các sinh vật khác.",
+        "C": "Không có thành tế bào để bảo vệ trước các tác nhân của môi trường xung quanh.",
+        "D": "Không có cấu trúc tế bào, phải tổng hợp các chất nhờ bộ máy của tế bào vật chủ."
+      },
+      "correct": "D",
+      "explanation": "Virus là một dạng sống kí sinh nội bào bắt buộc vì không có cấu trúc tế bào, phải tổng hợp các chất nhờ bộ máy của tế bào vật chủ. Kết luận: D.",
+      "userAnswer": "D",
+      "isCorrect": true
+    },
+    {
+      "id": 7,
+      "question": "Trong điều kiện ngoài tế bào, virus có khả năng nào sau đây?",
+      "options": {
+        "A": "Tồn tại lâu dài ở trạng thái đại phân tử hóa học.",
+        "B": "Sinh sản liên tục tạo nhiều cá thể mới.",
+        "C": "Transmissoin cho nhiều vật chủ mới.",
+        "D": "Sinh tổng hợp sẵn sàng lắp ráp khi thuận lợi."
+      },
+      "correct": "A",
+      "explanation": "Trong điều kiện ngoài tế bào, virus có khả năng tồn tại lâu dài ở trạng thái đại phân tử hóa học. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 8,
+      "question": "Câu 8. Nhận định nào sau đây về virus là đúng?",
+      "options": {
+        "A": "Virus là sinh vật cấu tạo đơn giản từ một tế bào.",
+        "B": "Virus sống tự do khắp mọi nơi trên Trái đất.",
+        "C": "Virus có hệ thống tự sản sinh năng lượng.",
+        "D": "Virus không mẫn cảm với chất kháng sinh."
+      },
+      "correct": "D",
+      "explanation": "Nhận định đúng về virus là không mẫn cảm với chất kháng sinh. Kết luận: D.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 9,
+      "question": "Virus được cấu tạo bởi 2 thành phần cơ bản là",
+      "options": {
+        "A": "lõi nucleic acid và lớp vỏ capsid",
+        "B": "lõi nucleic acid và lớp vỏ phospholipid",
+        "C": "lõi nucleic acid và lớp vỏ peptidoglycan.",
+        "D": "lõi nucleic acid và lớp vỏ carbohydrate"
+      },
+      "correct": "A",
+      "explanation": "Virus được cấu tạo bởi 2 thành phần cơ bản là lõi nucleic acid và lớp vỏ capsid. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 10,
+      "question": "Câu 10. Lõi nucleic acid của virus có thể là",
+      "options": {
+        "A": "DNA và RNA (chuỗi đơn hoặc chuỗi kép)",
+        "B": "DNA và protein (chuỗi đơn hoặc chuỗi kép)",
+        "C": "DNA hoặc RNA (chuỗi đơn hoặc chuỗi kép)",
+        "D": "RNA và protein (chuỗi đơn hoặc chuỗi kép)"
+      },
+      "correct": "C",
+      "explanation": "Lõi nucleic acid của virus có thể là DNA hoặc RNA (chuỗi đơn hoặc chuỗi kép). Kết luận: C.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 11,
+      "question": "Câu 11. Các đơn vị cấu tạo cấu tạo nên lớp vỏ của virus có bản chất là",
+      "options": {
+        "A": "protein.",
+        "B": "peptidoglycan",
+        "C": "phospholipid",
+        "D": "cellulose"
+      },
+      "correct": "A",
+      "explanation": "Các đơn vị cấu tạo nên lớp vỏ của virus có bản chất là protein. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 12,
+      "question": "Câu 12. Các đơn vị cấu tạo nên nên lớp vỏ của virus gọi là",
+      "options": {
+        "A": "Capsomer.",
+        "B": "Capasi.",
+        "C": "Captomor.",
+        "D": "Captoreal."
+      },
+      "correct": "A",
+      "explanation": "Các đơn vị cấu tạo nên lớp vỏ của virus gọi là capsomer. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 13,
+      "question": "Một số virus còn có lớp vỏ ngoài (envelope) cấu tạo từ",
+      "options": {
+        "A": "lớp kép phospholipid và protein.",
+        "B": "lớp kép phospholipid và cellulose.",
+        "C": "lớp kép phospholipid và nucleic acid.",
+        "D": "Lớp đơn phospholipid và chitin."
+      },
+      "correct": "A",
+      "explanation": "Một số virus còn có lớp vỏ ngoài (envelope) cấu tạo từ lớp kép phospholipid và protein. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 14,
+      "question": "Câu 14. Trên vỏ ngoài virus có chứa",
+      "options": {
+        "A": "các gai glycoprotein",
+        "B": "các gai peptidoglycan.",
+        "C": "các gai pepsinogen.",
+        "D": "các gai amino acid."
+      },
+      "correct": "A",
+      "explanation": "Trên vỏ ngoài virus có chứa các gai glycoprotein. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 15,
+      "question": "Câu 15. Trên lớp vỏ ngoài của virus, các gai glyoprotein có tính\nA. kháng nguyên và giúp virus bám vào vật chủ, nhận diện tế bào vật chủ để xâm nhập.\nB. kháng nguyên và giúp virus nhận diện để không bị dính trên bề mặt tế bào chủ\nC. kháng nguyên và giúp virus xâm nhập tế bào vật chủ, biến nạp gene virus vào gene vật chủ.\nD. kháng nguyên và giúp virus xâm nhập tế bào vật chủ, biến nạp gene virus vào gene vật chủ.",
+      "options": {
+        "A": "kàng nguyên và giúp virus bám vào vật chủ, nhận diện tế bào vật chủ để xâm nhập.",
+        "B": "kàng nguyên và giúp virus nhận diện để không bị dính trên bề mặt tế bào chủ",
+        "C": "kàng nguyên và giúp virus xâm nhập tế bào vật chủ, biến nạp gene virus vào gene vật chủ.",
+        "D": "kàng nguyên và giúp virus xâm nhập tế bào vật chủ, biến nạp gene virus vào gene vật chủ."
+      },
+      "correct": "A",
+      "explanation": "Trên lớp vỏ ngoài của virus, các gai glyoprotein có tính kháng nguyên và giúp virus bám vào vật chủ, nhận diện tế bào vật chủ để xâm nhập. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 16,
+      "question": "Virus trần là virus",
+      "options": {
+        "A": "không có vỏ capsid",
+        "B": "không có vỏ ngoài",
+        "C": "không có capsomer",
+        "D": "không có lõi nucleic acid."
+      },
+      "correct": "B",
+      "explanation": "Virus trần là virus không có vỏ ngoài. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 17,
+      "question": "Thứ tự từ ngoài vào trong của cấu tạo virus?",
+      "options": {
+        "A": "Lõi  Vỏ capsid  Vỏ ngoài.",
+        "B": "Vỏ ngoài  Vỏ capsid  Lõi.",
+        "C": "Vỏ capsid  Lõi  Vỏ ngoài.",
+        "D": "Vỏ ngoài  Lõi  Vỏ capsid."
+      },
+      "correct": "B",
+      "explanation": "Virus HIV có gai glycoprotein. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 18,
+      "question": "Câu 18. HIV được xem như là virus gây bệnh của thế kỉ khi gây hội chứng suy giảm miễn dịch ở người và cho tới nay vẫn chưa có vaccine phòng bệnh. Quan sát hình bên trái cho biết khi nói về virus HIV, phát biểu nào sau đây sai?",
+      "options": {
+        "A": "Virus HIV không có gai glycoprotein.",
+        "B": "Virus HIV là virus có vỏ ngoài.",
+        "C": "Virus HIV thuộc loại virus RNA.",
+        "D": "Virus HIV gây hội chứng AIDS."
+      },
+      "correct": "A",
+      "explanation": "Virus HIV không phải là virus gây bệnh của thế kỉ. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 19,
+      "question": "Quan sát hình bên trái cho biết khi nói về virus SARS-CoV-2 gây bệnh trên toàn cầu thời gian gần đây, phát biểu nào sau đây sai?",
+      "options": {
+        "A": "Virus SARS-CoV-2 thuộc loại virus DNA",
+        "B": "Virus SARS-CoV-2 là virus có vỏ ngoài.",
+        "C": "Virus SARS-CoV-2 gây bệnh đường hô hấp",
+        "D": "virus SARS-CoV-2 có cấu trúc xoắn."
+      },
+      "correct": "A",
+      "explanation": "Virus SARS-CoV-2 thuộc loại virus RNA, không phải DNA. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 20,
+      "question": "Câu 20. Hình bên trái, phage là virus kí sinh ở đối tượng nào sau đây?",
+      "options": {
+        "A": "Người.",
+        "B": "Động vật.",
+        "C": "Thực vật.",
+        "D": "Vi khuẩn."
+      },
+      "correct": "D",
+      "explanation": "Phage là virus kí sinh ở đối tượng vi khuẩn. Kết luận: D.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 21,
+      "question": "Câu 21. Phage còn có tên gọi khác là gì?",
+      "options": {
+        "A": "Thực thể khuẩn.",
+        "B": "Thực khuẩn thể.",
+        "C": "Trực khuẩn thể.",
+        "D": "Trực thể khuẩn."
+      },
+      "correct": "A",
+      "explanation": "Phage còn có tên gọi là thực thể khuẩn. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 22,
+      "question": "Câu 22. Không thể nuôi virus trong môi trường nhân tạo giống như vi khuẩn được vì",
+      "options": {
+        "A": "kích thước của nó vô cùng nhỏ bé.",
+        "B": "hệ gene chỉ chứa một loại nucleic acid.",
+        "C": "chúng không có hình dạng đặc thù.",
+        "D": "chúng là kí sinh nội bào bắt buộc."
+      },
+      "correct": "D",
+      "explanation": "Virus không phải là kí sinh nội bào bắt buộc. Kết luận: D.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 23,
+      "question": "Câu 23. Biết rằng phần lõi nucleic acid sẽ quyết định đặc điểm di truyền của virus. Nếu trộn nucleic acid của chủng virus M với một nửa vỏ protein của chủng virus N và một nửa vỏ protein của chủng M để tạo thành virus lai. Trong giai đoạn tổng hợp, phân tử nào sau đây không tham gia vào quá trình tổng hợp?",
+      "options": {
+        "A": "Nucleic acid của virus M",
+        "B": "Nucleic acid của virus N",
+        "C": "Vỏ protein của virus M",
+        "D": "Vỏ protein của virus N"
+      },
+      "correct": "B",
+      "explanation": "Nucleic acid của virus N không tham gia vào quá trình tổng hợp. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 24,
+      "question": "Trong giai đoạn lắp ráp, phân tử nào sau đây không tham gia vào quá trình lắp ráp?",
+      "options": {
+        "A": "Nucleic acid của virus M",
+        "B": "Nucleic acid của virus N",
+        "C": "Vỏ protein của virus M",
+        "D": "Vỏ protein của virus N"
+      },
+      "correct": "B",
+      "explanation": "Nucleic acid của virus N không tham gia vào quá trình lắp ráp. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 25,
+      "question": "Trong giai đoạn phóng thích, phân tử nào sau đây không tham gia vào quá trình phóng thích?",
+      "options": {
+        "A": "Nucleic acid của virus M",
+        "B": "Nucleic acid của virus N",
+        "C": "Vỏ protein của virus M",
+        "D": "Vỏ protein của virus N"
+      },
+      "correct": "B",
+      "explanation": "Trong giai đoạn phóng thích, phân tử Nucleic acid của virus N không tham gia vào quá trình phóng thích. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 26,
+      "question": "Trong giai đoạn xâm nhập, phân tử nào sau đây không tham gia vào quá trình xâm nhập?",
+      "options": {
+        "A": "Nucleic acid của virus M",
+        "B": "Nucleic acid của virus N",
+        "C": "Vỏ protein của virus M",
+        "D": "Vỏ protein của virus N"
+      },
+      "correct": "A",
+      "explanation": "Trong giai đoạn xâm nhập, phân tử Nucleic acid của virus M không tham gia vào quá trình xâm nhập. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 27,
+      "question": "Câu 27. Trong giai đoạn hấp phụ, phân tử bề mặt virus gắn đặc hiệu vào thụ thể bề mặt tế bào vật chủ theo nguyên tắc",
+      "options": {
+        "A": "bán bảo tồn",
+        "B": "chìa và khoá",
+        "C": "ngẫu nhiên",
+        "D": "bổ sung"
+      },
+      "correct": "B",
+      "explanation": "Trong giai đoạn hấp phụ, phân tử bề mặt virus gắn đặc hiệu vào thụ thể bề mặt tế bào vật chủ theo nguyên tắc chìa và khoá. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 28,
+      "question": "Câu 28. Phân tử bề mặt của phage là",
+      "options": {
+        "A": "A. đầu mút sợi lông đuôi",
+        "B": "B. gai glycoprotein",
+        "C": "C. phân tử protein bề mặt",
+        "D": "D. hệ gene"
+      },
+      "correct": "C",
+      "explanation": "Phân tử bề mặt của phage là phân tử protein bề mặt. Kết luận: C.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 29,
+      "question": "Câu 29. Phân tử bề mặt của virus có vỏ ngoài là",
+      "options": {
+        "A": "gai glycoprotein",
+        "B": "đầu mút sợi lông đuôi",
+        "C": "phân tử protein bề mặt",
+        "D": "hệ gene của virus"
+      },
+      "correct": "A",
+      "explanation": "Phân tử bề mặt của virus có vỏ ngoài là gai glycoprotein. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 30,
+      "question": "Câu 30. Phân tử bề mặt của virus trần là",
+      "options": {
+        "A": "gai glycoprotein",
+        "B": "đầu mút sợi lông đuôi",
+        "C": "protein nhô ra bề mặt",
+        "D": "hệ gene của virus"
+      },
+      "correct": "A",
+      "explanation": "Phân tử bề mặt của virus trần là gai glycoprotein. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 31,
+      "question": "Câu 31. Mỗi loại virus chỉ xâm nhập vào một số tế bào vật chủ nhất định vì",
+      "options": {
+        "A": "Bề mặt của tế bào vật chủ được bảo vệ bởi một lớp protein chống lại sự xâm nhập của virus.",
+        "B": "Bề mặt của virus có lớp vỏ ngoài hoặc vỏ capsid trơ với các thụ thể của tế bào vật chủ.",
+        "C": "Virus chỉ xâm nhập được khi phân tử bề mặt khớp đặc hiệu với thụ thể bề mặt tế bào vật chủ.",
+        "D": "Virus chỉ xâm nhập được khi hệ gene của nó khớp hoàn toàn với hệ gene của tế bào vật chủ"
+      },
+      "correct": "C",
+      "explanation": "Mỗi loại virus chỉ xâm nhập vào một số tế bào vật chủ nhất định vì virus chỉ xâm nhập được khi phân tử bề mặt khớp đặc hiệu với thụ thể bề mặt tế bào vật chủ. Kết luận: C.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 32,
+      "question": "Câu 32. Điều nào sau đây là đúng với sự xâm nhập của phage vào tế bào chủ?",
+      "options": {
+        "A": "Phage đưa cả nucleic acid và vỏ capsid vào tế bào chủ",
+        "B": "Phage chỉ bơm nucleic acid vào tế bào chủ",
+        "C": "Phage chỉ đưa vỏ protein vào tế bào chủ",
+        "D": "Phage vào tế bào chủ bằng cơ chế thực bào."
+      },
+      "correct": "B",
+      "explanation": "Điều đúng với sự xâm nhập của phage vào tế bào chủ là phage chỉ bơm nucleic acid vào tế bào chủ. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 33,
+      "question": "Trong giai đoạn xâm nhập, enzyme lysozyme do virus hoặc tế bào vật chủ tiết ra có tác dụng gì?",
+      "options": {
+        "A": "Phân hủy thành tế bào vật chủ hoặc vỏ capsid của virus",
+        "B": "Phân hủy màng sinh chất hoặc hệ gene của tế bào vật chủ",
+        "C": "Phân hủy các bào quan và hệ gene của tế bào vật chủ.",
+        "D": "Phân hủy ribosome và lysosome của tế bào vật chủ."
+      },
+      "correct": "A",
+      "explanation": "Enzyme lysozyme có tác dụng phân hủy thành tế bào vật chủ hoặc vỏ capsid của virus. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 34,
+      "question": "Câu 34. Virus có vỏ ngoài có thể xâm nhập vào tế bào vật chủ bằng cách dung hợp màng sinh chất vì",
+      "options": {
+        "A": "Vỏ ngoài của virus có cấu tạo tương tự như màng tế bào (gồm lớp kép phospholipid và protein).",
+        "B": "Vỏ ngoài của virus và màng tế bào có cấu tạo và thành phần hóa học hoàn toàn giống nhau.",
+        "C": "Vỏ ngoài của virus có chứa các protein đặc hiệu có khả năng xúc tác phản ứng dung hợp màng.",
+        "D": "Vi vỏ ngoài của virus có khả năng tiết enzyme làm tan màng tế bào vật chủ."
+      },
+      "correct": "C",
+      "explanation": "Vỏ ngoài của virus có chứa các protein đặc hiệu có khả năng xúc tác phản ứng dung hợp màng. Kết luận: C.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 35,
+      "question": "Câu 35. Trong quá trình nhân lên của virus, giai đoạn nào sau virus dùng bộ máy của tế bào vật để tạo nên hệ gene và protein?",
+      "options": {
+        "A": "Hấp phụ.",
+        "B": "Phóng thích.",
+        "C": "Tổng hợp.",
+        "D": "Lắp ráp."
+      },
+      "correct": "D",
+      "explanation": "Trong quá trình nhân lên của virus, giai đoạn lắp ráp sau virus dùng bộ máy của tế bào vật để tạo nên hệ gene và protein. Kết luận: D.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 36,
+      "question": "Câu 36. Giai đoạn có sự nhân lên của nucleic acid của virus trong tế bào vật chủ là",
+      "options": {
+        "A": "panh béo",
+        "B": "xâm nhập",
+        "C": "tổng hợp",
+        "D": "lắp ráp"
+      },
+      "correct": "C",
+      "explanation": "Giai đoạn tổng hợp có sự nhân lên của nucleic acid của virus trong tế bào vật chủ. Kết luận: C.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 37,
+      "question": "Trong chu trình nhân lên của virus ở giai đoạn nào sử dụng thuốc để kìm hãm sự phát triển của virus là hiệu quả nhất?",
+      "options": {
+        "A": "Giai đoạn hấp phụ và xâm nhập.",
+        "B": "Giai đoạn xâm nhập và sinh tổng hợp.",
+        "C": "Giai đoạn lắp giáp và giải phóng.",
+        "D": "Giai đoạn hấp phụ và sinh tổng hợp."
+      },
+      "correct": "B",
+      "explanation": "Trong chu trình nhân lên của virus ở giai đoạn xâm nhập và sinh tổng hợp sử dụng thuốc để kìm hãm sự phát triển của virus là hiệu quả nhất. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 38,
+      "question": "Câu 38. Phát biểu nào sau đây sai khi nói về sự phóng thích của virus có vỏ ngoài ra khỏi tế bào vật chủ?",
+      "options": {
+        "A": "Tổ hợp các đoạn màng có gắn glycoprotein và hợp với màng sinh chất.",
+        "B": "Tổ hợp vỏ capsid, hệ gene đi ra và đi ra ngoài theo kiểu xuất bào.",
+        "C": "Tiết enzyme làm tan màng tế bào của tế bào vật chủ và chui ra ngoài.",
+        "D": "Kéo theo màng sinh chất tế bào vật chủ để làm thành vỏ ngoài của virus."
+      },
+      "correct": "C",
+      "explanation": "Tiết enzyme làm tan màng tế bào của tế bào vật chủ và chui ra ngoài không phải là cách phóng thích của virus có vỏ ngoài ra khỏi tế bào vật chủ. Kết luận: C.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 39,
+      "question": "Chu trình tan là chu trình nào?",
+      "options": {
+        "A": "Virus nhân lên làm tan và giết chết tế bào vật chủ",
+        "B": "Virus chỉ nhân bản hệ gene và không phá vỡ tế bào vật chủ",
+        "C": "Virus làm tan hệ gene nhưng không gây chết tế bào vật chủ",
+        "D": "Virus chỉ nhân bản vỏ capsid mà không nhân bản hệ gene."
+      },
+      "correct": "A",
+      "explanation": "Chu trình tan là chu trình mà virus nhân lên làm tan và giết chết tế bào vật chủ. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 40,
+      "question": "Câu 40. Virus nhân lên theo chu trình tan gọi là?",
+      "options": {
+        "A": "Virus ôn hoà",
+        "B": "Virus độc",
+        "C": "Virus lưỡng tính",
+        "D": "Virus trần"
+      },
+      "correct": "D",
+      "explanation": "Virus nhân lên theo chu trình tan gọi là virus trần. Kết luận: D.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 41,
+      "question": "Chu trình tiềm tan là chu trình",
+      "options": {
+        "A": "Virus nhân lên làm tan và giết chết tế bào vật chủ",
+        "B": "Virus chỉ nhân bản hệ gene và không phá vỡ tế bào vật chủ.",
+        "C": "Virus làm tan hệ gene nhưng không gây chết tế bào vật chủ",
+        "D": "Virus chỉ nhân bản vỏ capsid mà không nhân bản hệ gene."
+      },
+      "correct": "A",
+      "explanation": "Chu trình tiềm tan là chu trình virus nhân bản hệ gene và không phá vỡ tế bào vật chủ. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 42,
+      "question": "Câu 42. Virus có khả năng dùng cả 2 chu trình tan và tiềm tan gọi là?",
+      "options": {
+        "A": "Virus ôn hoà",
+        "B": "Virus độc",
+        "C": "Virus lưỡng tính",
+        "D": "Virus trần"
+      },
+      "correct": "C",
+      "explanation": "Virus có khả năng dùng cả 2 chu trình tan và tiềm tan gọi là virus lưỡng tính. Kết luận: C.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 43,
+      "question": "Câu 43. Giai đoạn nào sau đây của virus quyết định chúng có gây bệnh được hay không?",
+      "options": {
+        "A": "Hấp phụ",
+        "B": "Lắp ráp",
+        "C": "Tổng hợp",
+        "D": "Xâm nhập."
+      },
+      "correct": "D",
+      "explanation": "Giai đoạn xâm nhập của virus quyết định chúng có gây bệnh được hay không. Kết luận: D.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 44,
+      "question": "Câu 44. Loại virus nào sau đây là virus ôn hòa\nA. Phage T4 B. phage C. SARS-CoV-2 D. Virus đậu mùa.",
+      "options": {
+        "A": "Phage T4",
+        "B": "phage",
+        "C": "SARS-CoV-2",
+        "D": "Virus đậu mùa."
+      },
+      "correct": "A",
+      "explanation": "Phage T4 là ví dụ về virus ôn hòa. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 45,
+      "question": "Câu 45. Phát biểu nào sau đây sai khi nói về sự khác nhau giữa chu trình tan và chu trình tiềm tan?",
+      "options": {
+        "A": "Chu trình tan có sự nhân lên tạo ra vô số virus mới, còn chu trình tiềm tan chỉ nhân bản hệ gane mà không tạo ra các virus mới.",
+        "B": "Chu trình tan cho phép hệ gene của virus tồn tại và nhân lên trong tế bào vật chủ, còn chu trình tiềm tan thì hệ gene không có khả năng nhân lên trong tê bào vật chủ.",
+        "C": "Chu trình tan kết thúc bằng việc virus gây chết tế bào vật chủ, còn chu trình tiểm tan hệ gene của virus sống chung và không phá vỡ tế bào vật chủ.",
+        "D": "Chu trình tiềm tan có thể tạo ra quẩn thể nhiều tế bào mang gene và bị nhiễm virus, còn chu trình tan thì làm chết tế bào vật chủ."
+      },
+      "correct": "B",
+      "explanation": "Chu trình tiềm tan cho phép hệ gene của virus tồn tại và nhân lên trong tế bào vật chủ, còn chu trình tiềm tan thì hệ gene không có khả năng nhân lên trong tê bào vật chủ. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 46,
+      "question": "Câu 46. Virus gây bệnh cho động vật và người bằng cách nào?",
+      "options": {
+        "A": "Virus nhân lên và phá vỡ tất cả các tế bào trong cơ thể và làm cho các mô và cơ quan trong cơ thể dần bị bệnh và cuối cùng có thể dẫn đến tử vong.",
+        "B": "Virus nhân lên, phá vỡ tế bào, lây truyền làm cho quần thể tế bào, mô bị tổn thương, dẫn đến nhiễm trùng cục bộ, tạo cơ hội cho các vi sinh vật khác gây bệnh.",
+        "C": "Virus xâm nhập vào cơ thể, nhân lên tạo ra vô số virus mới, khiến cho tất cả tế bào đều bị nhiễm bệnh và chúng tiết ra chất độc hại cho cơ thể.",
+        "D": "Virus xâm nhập vào cơ thể, nhân lên tạo ra vô số virus mới, khiến cho tất cả tế bào đều bị nhiễm bệnh và ức chế các quá trình sinh lí trong cơ thể."
+      },
+      "correct": "B",
+      "explanation": "Virus gây bệnh cho động vật và người bằng cách nhân lên, phá vỡ tế bào, lây truyền làm cho quần thể tế bào, mô bị tổn thương, dẫn đến nhiễm trùng cục bộ, tạo cơ hội cho các vi sinh vật khác gây bệnh. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 47,
+      "question": "Câu 47. Khi cơ thể bị nhiễm virus, giai đoạn đầu thường",
+      "options": {
+        "A": "có triệu chứng nặng",
+        "B": "có triệu chứng rất nặng",
+        "C": "chưa có triệu chứng",
+        "D": "gây tử vong lập tức."
+      },
+      "correct": "C",
+      "explanation": "Khi cơ thể bị nhiễm virus, giai đoạn đầu thường chưa có triệu chứng. Kết luận: C.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 48,
+      "question": "Câu 48. SARS-CoV-2 xâm nhập và gây bệnh cho các tế bào của cơ quan nào sau đây?",
+      "options": {
+        "A": "Tuần hoàn",
+        "B": "Thần kinh",
+        "C": "Hô hấp",
+        "D": "Tiêu hóa."
+      },
+      "correct": "C",
+      "explanation": "SARS-CoV-2 xâm nhập và gây bệnh cho các tế bào của cơ quan hô hấp. Kết luận: C.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 49,
+      "question": "Câu 49. Nhận định về phage nào sau đây đúng?",
+      "options": {
+        "A": "Xâm nhập vào bên trong tế bào nhờ vào sự dung hợp màng sinh chất với vỏ ngoài.",
+        "B": "Xâm nhập toàn bộ thành phần cấu trúc vào bên trong tế bào vật chủ.",
+        "C": "Kí sinh nội bào bắt buộc bên trong cơ thể người, động vật, thực vật và nấm",
+        "D": "Có cấu trúc hỗn hợp, vừa có cấu trúc xoắn vừa có cấu trúc khối."
+      },
+      "correct": "A",
+      "explanation": "Phage xâm nhập vào tế bào bằng cách dung hợp màng sinh chất với vỏ ngoài của tế bào. Kết luận: A.",
+      "userAnswer": null,
+      "isCorrect": false
+    },
+    {
+      "id": 50,
+      "question": "Câu 50. Thụ thể CD4 là thụ thể của virus HIV. Nếu đưa hồng cầu có thụ thể CD4 vào bệnh nhân HIV thì điều gì sau đây sẽ xảy ra?",
+      "options": {
+        "A": "Bệnh nhân sẽ thiếu máu nghiêm trọng vì HIV sẽ phá hủy hồng cầu.",
+        "B": "Bệnh sẽ không tiến triển thêm vì HIV sẽ không nhân lên được trong hồng cầu.",
+        "C": "HIV sẽ xâm nhập được nhưng không nhân lên được trong hồng cầu có thụ thể CD4.",
+        "D": "Bệnh nhân sẽ thiếu máu nặng vì bạch cầu sẽ tiêu diệt các hồng cầu chứa HIV."
+      },
+      "correct": "B",
+      "explanation": "Thụ thể CD4 giúp virus HIV nhân lên và di chuyển trong hồng cầu. Nếu đưa hồng cầu có thụ thể CD4 vào bệnh nhân HIV, điều này sẽ ngăn chặn sự nhân lên của HIV, từ đó ngăn chặn tiến triển của bệnh. Kết luận: B.",
+      "userAnswer": null,
+      "isCorrect": false
+    }
+  ],
+  "score": 1,
+  "totalQuestions": 50
+}

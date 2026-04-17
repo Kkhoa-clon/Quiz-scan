@@ -24,11 +24,11 @@ export type QuizApiOptions = {
 }
 
 export function createQuizApiApp(dataDir: string, options?: QuizApiOptions): Express {
-  const ollamaBase = (
-    options?.ollamaHost ||
-    process.env.OLLAMA_HOST ||
-    'http://127.0.0.1:11434'
-  ).replace(/\/$/, '')
+  let ollamaBase = options?.ollamaHost || process.env.OLLAMA_HOST || 'http://127.0.0.1:11434';
+  if (ollamaBase === '0.0.0.0' || (ollamaBase && !ollamaBase.includes('://') && !ollamaBase.includes(':'))) {
+    ollamaBase = 'http://127.0.0.1:11434';
+  }
+  ollamaBase = ollamaBase.replace(/\/$/, '')
 
   const app = express()
   app.use(express.json({ limit: '40mb' }))
