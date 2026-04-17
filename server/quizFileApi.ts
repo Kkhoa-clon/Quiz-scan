@@ -16,7 +16,7 @@ type QuizJson = {
   [key: string]: unknown
 }
 
-import { createOcrProxy } from './ocrProxy';
+
 
 export type QuizApiOptions = {
   /** Ví dụ http://127.0.0.1:11434 hoặc http://host.docker.internal:11434 */
@@ -32,7 +32,7 @@ export function createQuizApiApp(dataDir: string, options?: QuizApiOptions): Exp
 
   const app = express()
   app.use(express.json({ limit: '40mb' }))
-  app.use(express.raw({ type: 'image/*', limit: '20mb' })) // for OCR
+  app.use(express.raw({ type: 'image/*', limit: '20mb' })) // for quiz image uploads
 
   // No auth for local dev (simple)
   // Uncomment for prod:
@@ -47,8 +47,7 @@ export function createQuizApiApp(dataDir: string, options?: QuizApiOptions): Exp
   });
   */
 
-  // Mount OCR proxy
-  app.use('/ocr', createOcrProxy());
+
 
   /** Proxy Ollama — trình duyệt gọi same-origin, tránh CORS. */
   app.get('/ollama/tags', async (_req, res) => {
