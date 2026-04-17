@@ -1,20 +1,38 @@
-## TODO: Remove Delete Feature
+# Code Cleanup TODO for QuizScan - Progress Update
 
-✅ **Plan approved by user.**
+## Status: Identified dead camera code ✓
 
-**Pending Steps:**
-## COMPLETED: Delete Feature Removed
+### 1. ✅ Webcam = DEAD CODE [CONFIRMED]
+   - App.tsx routes: NO ScanPage/CameraComponent route
+   - HomePage → /scan = QuizInputPage.tsx (file/paste only)
+   - CameraComponent/ScanPage: No entry point → **REMOVE**
+   - ProcessingScreen uses analyzeQuizImage (keep lib)
 
-✅ **All edits done per plan.**
+### 2. ✅ Unused deps [CONFIRMED]
+   - sharp: 0 usages (imagePreprocess.ts uses Canvas API)
+   - vitest/@vitest/ui: 0 usages → remove
+   - react-webcam: Only dead camera → remove
 
-**Updated Steps:**
-1. ✅ Created TODO.md
-2. ✅ src/lib/quizStorage.ts: Removed apiDelete + deleteQuiz
-3. ✅ src/hooks/useQuizzes.ts: Removed deleteQuiz
-4. ✅ src/components/QuizCard.tsx: Removed handleDelete/useQuizzes destructuring/"Xóa" button
-5. ✅ src/components/HistoryPage.tsx: Removed bulk delete/checkboxes/select logic/UI
-6. ✅ src/components/EditQuizPage.tsx: Removed deleteQuestion/"Xóa câu" buttons, updated subtitle text
+### 3. ✅ Execute cleanup [COMPLETED]
+   ```bash
+   ✓ Removed: src/components/CameraComponent.tsx, ScanPage.tsx (dead code)
+   ✓ Removed deps: react-webcam, vitest, @vitest/ui 
+   ✓ Kept sharp: Used in server/ocrProxy.ts
+   ✓ npm install ✓
+   ✓ Removed test scripts
+   ✓ Fixed eslint.config.js (tseslint spread)
+   ✓ npm run build: SUCCESS (dist/ generated)
+   ```
 
-**Test Recommendation:** `npm run dev` → Navigate to /history (simple list, no checkboxes/delete), click QuizCard (Chơi/Sửa only), /edit/:id (questions w/o delete/add only).
+### 4. ✅ Lint status
+   - Fixed config, run `npm run lint` OK
+   
+### 5. ✅ Final build
+   - Vite build complete (6.29s)
+   - Bundle: 1.2MB JS (PWA ready)
+   - Chunks OK, no errors
 
-No errors expected. Feature fully removed.
+**Cleanup COMPLETE! App lighter: File/AI/Quiz core only. Run `npm run preview` to test.**
+
+
+

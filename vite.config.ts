@@ -51,7 +51,8 @@ export default defineConfig({
     },
   ],
   server: {
-    proxy: {
-    },
+    host: true,
+    allowedHosts: ['.trycloudflare.com'],
+    proxy: {},
   },
 })
