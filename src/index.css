@@ -2,18 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: #111827;
+  background: #F8FBFF;
+}
+
 html {
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-height: 100dvh;
-  font-family: Inter, system-ui, 'Segoe UI', Roboto, sans-serif;
-  background: #ffffff;
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.12), transparent 36%), #F8FBFF;
   color: #111827;
 }
 
 #root {
   min-height: 100dvh;
+}
+
+button,
+input,
+select,
+textarea {
+  transition: all 0.2s ease;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.18);
+  color: #111827;
+}
+
+@layer components {
+  .card {
+    @apply rounded-[2rem] border border-slate-200 bg-white shadow-soft;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+  }
+
+  .card-soft {
+    @apply rounded-[2rem] bg-slate-50;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white shadow-sm transition duration-200 ease-in-out hover:shadow-md focus:outline-none;
+    background-color: #3B82F6;
+    background-image: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  }
+
+  .btn-primary:hover {
+    background-color: #2563EB;
+  }
+
+  .btn-primary:focus-visible {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.22);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-900 transition duration-200 ease-in-out hover:bg-slate-100;
+    box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.08);
+  }
+
+  .input-field {
+    @apply w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none transition duration-200 ease-in-out;
+    box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.06);
+    border-color: #E2E8F0;
+  }
+
+  .input-field:focus-visible {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.16);
+    border-color: #3B82F6;
+  }
+
+  .section-card {
+    @apply rounded-[2rem] border border-slate-200 bg-white/95 p-6 shadow-soft;
+  }
+
+  .fade-in-up {
+    animation: fade-in-up 0.42s ease both;
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

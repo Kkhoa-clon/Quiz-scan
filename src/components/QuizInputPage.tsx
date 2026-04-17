@@ -15,6 +15,7 @@ export function QuizInputPage() {
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
   const [rawText, setRawText] = useState('')
+  const [inputMode, setInputMode] = useState<'file' | 'paste'>('file')
   const [dragging, setDragging] = useState(false)
   const [status, setStatus] = useState('Sẵn sàng')
   const [progress, setProgress] = useState(0)
@@ -69,10 +70,15 @@ export function QuizInputPage() {
     setIsProcessing(true)
 
     try {
-      let text = rawText.trim()
-      if (!text) {
+      let text = ''
+      if (inputMode === 'paste') {
+        text = rawText.trim()
+        if (!text) {
+          throw new Error('Chưa có nội dung đề. Dán nội dung đề để tiếp tục.')
+        }
+      } else {
         if (!selectedFile) {
-          throw new Error('Chưa có file hoặc nội dung đề. Dán hoặc tải file lên để tiếp tục.')
+          throw new Error('Chưa có file. Tải file đề lên để tiếp tục.')
         }
         setStatus('Đang trích xuất văn bản từ file…')
         setProgress(18)
@@ -110,119 +116,145 @@ export function QuizInputPage() {
     } finally {
       setIsProcessing(false)
     }
-  }, [rawText, selectedFile, ollamaModel, refineEnabled, aiStructureEnabled, ollamaEnabled, navigate, startQuiz])
+  }, [inputMode, rawText, selectedFile, ollamaModel, refineEnabled, aiStructureEnabled, ollamaEnabled, navigate, startQuiz])
 
   return (
-    <div className="mx-auto max-w-4xl px-4 pb-28 pt-6">
+    <div className="mx-auto max-w-4xl px-4 pb-28 pt-6 fade-in-up">
       <header className="mb-6 flex items-center gap-3">
         <button
           type="button"
           onClick={() => navigate(-1)}
-          className="rounded-full p-2 text-gray-600 hover:bg-gray-100"
+          className="rounded-full p-2 text-slate-600 hover:bg-slate-100"
           aria-label="Quay lại"
         >
           ←
         </button>
         <div>
-          <h1 className="text-xl font-bold text-gray-900">Nhập đề trắc nghiệm</h1>
-          <p className="text-sm text-gray-500">Tải file đề hoặc dán văn bản rồi xử lý ngay.</p>
+          <h1 className="text-2xl font-bold text-slate-950">Nhập đề trắc nghiệm</h1>
+          <p className="text-sm text-slate-500">Tải file đề hoặc dán văn bản rồi xử lý ngay.</p>
         </div>
       </header>
 
       {error ? (
-        <div className="mb-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">
+        <div className="mb-4 rounded-[24px] border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">
           {error}
         </div>
       ) : null}
 
       <div className="grid gap-6 lg:grid-cols-[1.35fr_0.85fr]">
-        <div className="space-y-6 rounded-3xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="card p-6 space-y-6">
           <div className="space-y-3">
-            <div>
-              <h2 className="text-sm font-semibold text-gray-900">Tải file hoặc dán văn bản</h2>
-              <p className="mt-1 text-xs text-gray-500">
-                Hỗ trợ .doc, .docx, .pdf, .txt. Nếu đề đã ở dạng text, dán trực tiếp sẽ chính xác nhất.
-              </p>
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <h2 className="text-sm font-semibold text-slate-950">Nhập đề trắc nghiệm</h2>
+                <p className="mt-1 text-xs text-slate-500">
+                  Chọn cách nhập đề: tải file hoặc dán trực tiếp.
+                </p>
+              </div>
+              <div className="inline-flex rounded-full border border-slate-200 bg-slate-50 p-1">
+                <button
+                  type="button"
+                  onClick={() => setInputMode('file')}
+                  className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+                    inputMode === 'file'
+                      ? 'bg-white text-slate-950 shadow-sm'
+                      : 'text-slate-500 hover:bg-slate-100'
+                  }`}
+                >
+                  Tải file
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setInputMode('paste')}
+                  className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+                    inputMode === 'paste'
+                      ? 'bg-white text-slate-950 shadow-sm'
+                      : 'text-slate-500 hover:bg-slate-100'
+                  }`}
+                >
+                  Dán văn bản
+                </button>
+              </div>
             </div>
 
-            <div
-              onDrop={handleDrop}
-              onDragOver={(event) => {
-                event.preventDefault()
-                setDragging(true)
-              }}
-              onDragLeave={() => setDragging(false)}
-              className={`rounded-3xl border p-4 text-sm ${
-                dragging ? 'border-blue-300 bg-blue-50' : 'border-dashed border-gray-300 bg-gray-50'
-              }`}
-            >
-              <p className="text-gray-700">Kéo thả file vào đây hoặc chọn file bằng nút bên dưới.</p>
-              <p className="mt-2 text-xs text-gray-500">File hiện tại: {fileLabel}</p>
-              <button
-                type="button"
-                onClick={() => fileInputRef.current?.click()}
-                className="mt-4 inline-flex rounded-2xl bg-[#3B82F6] px-4 py-2 text-sm font-semibold text-white hover:bg-[#2563EB]"
-                disabled={isProcessing}
-              >
-                Chọn file
-              </button>
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept={acceptedExtensions.map((ext) => `.${ext}`).join(',')}
-                className="hidden"
-                onChange={handleFileInputChange}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="quiz-text" className="mb-2 block text-sm font-semibold text-gray-900">
-                Dán đề trực tiếp
-              </label>
-              <textarea
-                id="quiz-text"
-                value={rawText}
-                onChange={(event) => setRawText(event.target.value)}
-                rows={10}
-                className="w-full rounded-3xl border border-gray-200 bg-gray-50 p-4 text-sm text-gray-900 outline-none transition focus:border-[#3B82F6] focus:ring-2 focus:ring-[#bfdbfe]"
-                placeholder="Dán nội dung đề trắc nghiệm tại đây..."
-                disabled={isProcessing}
-              />
-            </div>
+            {inputMode === 'file' ? (
+              <div className="space-y-4">
+                <div
+                  onDrop={handleDrop}
+                  onDragOver={(event) => {
+                    event.preventDefault()
+                    setDragging(true)
+                  }}
+                  onDragLeave={() => setDragging(false)}
+                  className={`rounded-[32px] border p-4 text-sm transition duration-200 ${
+                    dragging ? 'border-[#3B82F6]/40 bg-[#EFF6FF] shadow-soft' : 'border-dashed border-slate-300 bg-slate-50'
+                  }`}
+                >
+                  <p className="text-slate-700">Kéo thả file vào đây hoặc chọn file bằng nút bên dưới.</p>
+                  <p className="mt-2 text-xs text-slate-500">File hiện tại: {fileLabel}</p>
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    className="mt-4 btn-primary"
+                    disabled={isProcessing}
+                  >
+                    Chọn file
+                  </button>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept={acceptedExtensions.map((ext) => `.${ext}`).join(',')}
+                    className="hidden"
+                    onChange={handleFileInputChange}
+                  />
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <label htmlFor="quiz-text" className="mb-2 block text-sm font-semibold text-slate-950">
+                  Dán đề trực tiếp
+                </label>
+                <textarea
+                  id="quiz-text"
+                  value={rawText}
+                  onChange={(event) => setRawText(event.target.value)}
+                  rows={12}
+                  className="input-field min-h-[260px]"
+                  placeholder="Dán nội dung đề trắc nghiệm tại đây..."
+                  disabled={isProcessing}
+                />
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              {/* <p className="text-xs text-gray-500">
-                Nếu đã có văn bản đề, ưu tiên dán thay vì upload ảnh/OCR.
-              </p> */}
-            </div>
+            <div />
             <button
               type="button"
               onClick={handleProcess}
-              disabled={isProcessing || (!selectedFile && !rawText.trim())}
-              className="rounded-3xl bg-[#3B82F6] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#2563EB] disabled:cursor-not-allowed disabled:bg-gray-300"
+              disabled={isProcessing || (inputMode === 'file' ? !selectedFile : !rawText.trim())}
+              className="btn-primary disabled:bg-slate-300 disabled:text-slate-700 disabled:cursor-not-allowed"
             >
               {isProcessing ? 'Đang xử lý...' : 'Xử lý ngay'}
             </button>
           </div>
 
           <div className="space-y-2">
-            <div className="flex items-center justify-between text-xs text-gray-500">
+            <div className="flex items-center justify-between text-xs text-slate-500">
               <span>Trạng thái</span>
               <span>{progress}%</span>
             </div>
-            <div className="h-2 overflow-hidden rounded-full bg-gray-100">
+            <div className="h-2 overflow-hidden rounded-full bg-slate-100">
               <div
                 className="h-full rounded-full bg-[#3B82F6] transition-all duration-300"
                 style={{ width: `${Math.min(progress, 100)}%` }}
               />
             </div>
-            <p className="text-sm text-gray-700">{status}</p>
+            <p className="text-sm text-slate-700">{status}</p>
           </div>
         </div>
 
-        <div className="rounded-3xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="card p-6">
           <OllamaModelPicker
             model={ollamaModel}
             onModelChange={setOllamaModel}

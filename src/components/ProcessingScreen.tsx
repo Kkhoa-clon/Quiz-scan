@@ -82,15 +82,15 @@ export function ProcessingScreen({
   return (
     <div className="flex min-h-[50vh] flex-col items-center justify-center gap-6 px-4">
       <div
-        className="h-16 w-16 animate-spin rounded-full border-4 border-[#EFF6FF] border-t-[#3B82F6]"
+        className="h-16 w-16 animate-spin rounded-full border-4 border-slate-200 border-t-[#3B82F6]"
         aria-hidden
       />
       <div className="w-full max-w-sm">
-        <div className="mb-2 flex justify-between text-sm text-gray-600">
+        <div className="mb-2 flex justify-between text-sm text-slate-600">
           <span>{status}</span>
           <span>{Math.round(Math.min(progress, 100))}%</span>
         </div>
-        <div className="h-3 overflow-hidden rounded-full bg-gray-100">
+        <div className="h-3 overflow-hidden rounded-full bg-slate-100">
           <div
             className="h-full rounded-full bg-[#3B82F6] transition-all duration-300"
             style={{ width: `${Math.min(progress, 100)}%` }}

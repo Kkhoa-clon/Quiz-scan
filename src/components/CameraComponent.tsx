@@ -28,7 +28,7 @@ export function CameraComponent({ onCapture, onFiles }: CameraComponentProps) {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl bg-black shadow-md">
+      <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[32px] bg-black shadow-soft">
         <Webcam
           ref={webcamRef}
           audio={false}
@@ -50,14 +50,14 @@ export function CameraComponent({ onCapture, onFiles }: CameraComponentProps) {
         <button
           type="button"
           onClick={capture}
-          className="rounded-2xl bg-[#3B82F6] py-3.5 font-semibold text-white shadow-md transition hover:bg-[#2563EB]"
+          className="btn-primary"
         >
           Chụp ảnh
         </button>
         <button
           type="button"
           onClick={() => fileRef.current?.click()}
-          className="rounded-2xl border-2 border-[#3B82F6] py-3.5 font-semibold text-[#3B82F6] transition hover:bg-[#EFF6FF]"
+          className="rounded-2xl border-2 border-[#3B82F6] py-3.5 font-semibold text-[#3B82F6] transition hover:bg-[#3B82F6]/10"
         >
           Tải ảnh
         </button>
@@ -74,7 +74,7 @@ export function CameraComponent({ onCapture, onFiles }: CameraComponentProps) {
           e.target.value = ''
         }}
       />
-      <p className="text-center text-xs text-gray-500">
+      <p className="text-center text-xs text-slate-500">
         Chụp rõ đề, tránh bóng và mờ. Có thể chọn nhiều ảnh — app dùng ảnh đầu tiên để AI phân tích.
       </p>
     </div>

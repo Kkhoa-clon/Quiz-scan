@@ -18,19 +18,19 @@ export function QuestionCard({
   showSolution,
 }: QuestionCardProps) {
   return (
-    <div className="rounded-3xl border border-gray-200 bg-white p-5 shadow-sm">
-      <p className="text-base font-medium leading-relaxed text-gray-900">{question.question}</p>
+    <div className="card p-5 shadow-sm">
+      <p className="text-base font-medium leading-relaxed text-slate-950">{question.question}</p>
       <ul className="mt-4 flex flex-col gap-2">
         {KEYS.map((k) => {
           const text = question.options[k]
           const isSel = selected === k
           const isCorrect = k === question.correct
-          let ring = 'border-gray-200'
+          let ring = 'border-slate-200'
           if (showSolution) {
             if (isCorrect) ring = 'border-emerald-500 bg-emerald-50'
             else if (isSel && !isCorrect) ring = 'border-red-400 bg-red-50'
           } else if (isSel) {
-            ring = 'border-[#3B82F6] bg-[#EFF6FF]'
+            ring = 'border-[#3B82F6] bg-[#3B82F6]/10'
           }
           return (
             <li key={k}>
@@ -43,15 +43,15 @@ export function QuestionCard({
                 }`}
               >
                 <span className="mt-0.5 font-bold text-[#3B82F6]">{k}.</span>
-                <span className="text-gray-800">{text}</span>
+                <span className="text-slate-800">{text}</span>
               </button>
             </li>
           )
         })}
       </ul>
       {showSolution && question.explanation ? (
-        <p className="mt-4 rounded-2xl bg-gray-50 p-3 text-sm text-gray-700">
-          <span className="font-semibold text-gray-900">Giải thích: </span>
+        <p className="mt-4 rounded-2xl bg-slate-50 p-3 text-sm text-slate-700">
+          <span className="font-semibold text-slate-900">Giải thích: </span>
           {question.explanation}
         </p>
       ) : null}

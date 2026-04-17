@@ -55,7 +55,7 @@ export function QuizPlayer() {
         <button
           type="button"
           onClick={() => navigate('/')}
-          className="text-sm font-medium text-gray-600 hover:text-gray-900"
+          className="rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:bg-slate-100"
         >
           Hủy
         </button>
@@ -67,15 +67,15 @@ export function QuizPlayer() {
               return !t
             })
           }}
-          className={`rounded-full px-3 py-1 text-xs font-semibold ${
-            timerOn ? 'bg-amber-100 text-amber-900' : 'bg-gray-100 text-gray-600'
+          className={`rounded-full px-4 py-2 text-xs font-semibold transition ${
+            timerOn ? 'bg-amber-100 text-amber-900 shadow-sm' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
           }`}
         >
           {timerOn ? `⏱ ${fmt(secondsLeft)}` : 'Bật timer 45p'}
         </button>
       </div>
 
-      <div className="mb-2 flex items-center justify-between text-sm text-gray-600">
+      <div className="mb-2 flex items-center justify-between text-sm text-slate-600">
         <span className="font-medium text-[#3B82F6]">
           Câu {index + 1}/{total}
         </span>
@@ -124,7 +124,7 @@ export function QuizPlayer() {
         </button>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 border-t border-gray-100 bg-white/95 p-4 backdrop-blur">
+      <div className="fixed bottom-0 left-0 right-0 border-t border-slate-200 bg-white/95 p-4 backdrop-blur shadow-soft">
         <div className="mx-auto max-w-lg">
           <button
             type="button"
@@ -132,7 +132,7 @@ export function QuizPlayer() {
               submitQuiz()
               navigate('/result', { replace: true })
             }}
-            className="w-full rounded-2xl bg-[#3B82F6] py-3.5 text-center font-semibold text-white shadow-md hover:bg-[#2563EB]"
+            className="w-full rounded-2xl bg-gradient-to-r from-[#3B82F6] to-[#2563EB] py-3.5 text-center font-semibold text-white shadow-md hover:opacity-95"
           >
             Nộp bài
           </button>

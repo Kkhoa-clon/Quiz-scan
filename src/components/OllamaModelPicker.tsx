@@ -14,7 +14,7 @@ interface OllamaModelPickerProps {
 }
 
 function selectClass(disabled: boolean) {
-  return `w-full rounded-2xl border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm text-gray-900 ${disabled ? 'opacity-50' : ''}`
+  return `w-full rounded-2xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 ${disabled ? 'opacity-50' : ''}`
 }
 
 export function OllamaModelPicker({
@@ -68,9 +68,9 @@ export function OllamaModelPicker({
   const modelSelectDisabled = loading || models.length === 0
 
   return (
-    <div className="mb-6 rounded-3xl border border-gray-200 bg-white p-4 shadow-sm">
+    <div className="card mb-6 p-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="text-sm font-semibold text-gray-900">Ollama</h2>
+        <h2 className="text-sm font-semibold text-slate-950">Ollama</h2>
         <button
           type="button"
           onClick={() => void load({ syncSelection: false })}
@@ -94,10 +94,10 @@ export function OllamaModelPicker({
         </p>
       ) : null}
 
-      <div className="mt-4 space-y-3 border-t border-gray-100 pt-4">
-        <p className="text-xs font-medium text-gray-700">Xử lý chữ</p>
+      <div className="mt-4 space-y-3 border-t border-slate-100 pt-4">
+        <p className="text-xs font-medium text-slate-700">Xử lý chữ</p>
         <div>
-          <label htmlFor="ollama-text-model" className="mb-1 block text-xs font-medium text-gray-600">
+          <label htmlFor="ollama-text-model" className="mb-1 block text-xs font-medium text-slate-600">
             Model chữ
           </label>
           <select
@@ -119,35 +119,35 @@ export function OllamaModelPicker({
           </select>
         </div>
 
-        <label className="flex cursor-pointer items-center gap-2 text-sm text-gray-800">
+        <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-800">
           <input
             type="checkbox"
             checked={refineEnabled}
             onChange={(e) => onRefineEnabledChange(e.target.checked)}
             disabled={!hasModels || loading}
-            className="h-4 w-4 rounded border-gray-300 text-[#3B82F6] disabled:opacity-50"
+            className="h-4 w-4 rounded border-slate-300 text-[#3B82F6] disabled:opacity-50"
           />
           Chuẩn hóa văn bản
         </label>
 
-        <label className="flex cursor-pointer items-center gap-2 text-sm text-gray-800">
+        <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-800">
           <input
             type="checkbox"
             checked={aiStructureEnabled}
             onChange={(e) => onAiStructureEnabledChange(e.target.checked)}
             disabled={!hasModels || loading}
-            className="h-4 w-4 rounded border-gray-300 text-[#3B82F6] disabled:opacity-50"
+            className="h-4 w-4 rounded border-slate-300 text-[#3B82F6] disabled:opacity-50"
           />
           AI tách từng câu &amp;
         </label>
 
-        <label className="flex cursor-pointer items-center gap-2 text-sm text-gray-800">
+        <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-800">
           <input
             type="checkbox"
             checked={enabled}
             onChange={(e) => onEnabledChange(e.target.checked)}
             disabled={!hasModels || loading}
-            className="h-4 w-4 rounded border-gray-300 text-[#3B82F6] disabled:opacity-50"
+            className="h-4 w-4 rounded border-slate-300 text-[#3B82F6] disabled:opacity-50"
           />
           Chấm đáp án + giải thích
         </label>

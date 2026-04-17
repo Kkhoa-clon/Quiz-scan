@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import type { QuizDoc } from '../lib/types'
-import { useQuizzes } from '../hooks/useQuizzes'
 
 interface QuizCardProps {
   quiz: QuizDoc
@@ -23,29 +22,29 @@ export function QuizCard({ quiz }: QuizCardProps) {
   const subtitle = `${quiz.totalQuestions} câu · ${quiz.score}/${quiz.totalQuestions} điểm`
 
   return (
-    <div className="group flex gap-4 rounded-3xl border border-gray-200 bg-white p-4 shadow-sm hover:shadow-lg transition-all">
-      <div className="h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-gray-100">
+    <div className="group flex gap-4 rounded-[28px] border border-slate-200 bg-white/95 p-4 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-soft">
+      <div className="h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-slate-100 transition duration-200 group-hover:scale-[1.03]">
         {thumb ? (
           <img src={thumb} alt="" className="h-full w-full object-cover" />
         ) : (
-          <div className="flex h-full items-center justify-center text-2xl text-gray-400">📄</div>
+          <div className="flex h-full items-center justify-center text-2xl text-slate-400">📄</div>
         )}
       </div>
       <div className="min-w-0 flex-1">
-        <h3 className="line-clamp-2 font-semibold text-gray-900">{quiz.title}</h3>
-        <p className="mt-1 text-sm text-gray-500">{formatDate(quiz.createdAt)}</p>
+        <h3 className="line-clamp-2 font-semibold text-slate-950">{quiz.title}</h3>
+        <p className="mt-1 text-sm text-slate-500">{formatDate(quiz.createdAt)}</p>
         <p className="mt-1 text-sm font-medium text-[#3B82F6]">{subtitle}</p>
       </div>
       <div className="flex flex-col gap-2 ml-2">
         <Link
           to={`/saved/${quiz.id}`}
-          className="px-3 py-1.5 text-xs font-medium text-blue-600 hover:text-blue-700 bg-blue-50 rounded-lg hover:bg-blue-100 whitespace-nowrap"
+          className="rounded-2xl bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-900 hover:bg-slate-200 whitespace-nowrap"
         >
           Chơi
         </Link>
         <Link
           to={`/edit/${quiz.id}`}
-          className="px-3 py-1.5 text-xs font-medium text-green-600 hover:text-green-700 bg-green-50 rounded-lg hover:bg-green-100 whitespace-nowrap"
+          className="rounded-2xl bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-900 hover:bg-slate-200 whitespace-nowrap"
         >
           Sửa
         </Link>

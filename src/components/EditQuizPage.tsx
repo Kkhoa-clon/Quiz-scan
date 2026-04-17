@@ -14,7 +14,6 @@ export function EditQuizPage() {
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  // Editable state
   const [title, setTitle] = useState('')
   const [questions, setQuestions] = useState<QuestionType[]>([])
 
@@ -32,7 +31,7 @@ export function EditQuizPage() {
         }
         setQuiz(q)
         setTitle(q.title)
-        setQuestions([...q.questions]) // Copy for editing
+        setQuestions([...q.questions])
       } catch (e) {
         setError('Lỗi tải bài')
       } finally {
@@ -42,9 +41,9 @@ export function EditQuizPage() {
   }, [id, navigate])
 
   const updateQuestion = useCallback((qIndex: number, field: keyof QuestionType, value: any) => {
-    setQuestions(prev => prev.map((q, i) => 
-      i === qIndex ? { ...q, [field]: value } : q
-    ))
+    setQuestions((prev) =>
+      prev.map((q, i) => (i === qIndex ? { ...q, [field]: value } : q))
+    )
   }, [])
 
   const addQuestion = useCallback(() => {
@@ -57,7 +56,7 @@ export function EditQuizPage() {
       userAnswer: null,
       isCorrect: undefined,
     }
-    setQuestions(prev => [...prev, newQ])
+    setQuestions((prev) => [...prev, newQ])
   }, [questions.length])
 
   const handleSave = useCallback(async () => {
@@ -91,89 +90,89 @@ export function EditQuizPage() {
     }
   }, [quiz, questions, title, navigate, loadCompletedQuiz])
 
-  if (loading) return <div className="p-8 text-center text-gray-500">Đang tải...</div>
+  if (loading) return <div className="p-8 text-center text-slate-500">Đang tải...</div>
 
   return (
-    <div className="mx-auto max-w-4xl px-4 pb-24 pt-8">
+    <div className="mx-auto max-w-4xl px-4 pb-24 pt-8 fade-in-up">
       <header className="mb-8 flex items-center gap-4">
-        <Link to="/history" className="rounded-full p-3 text-gray-600 hover:bg-gray-100" aria-label="Lịch sử">
+        <Link to="/history" className="rounded-full p-3 text-slate-600 hover:bg-slate-100" aria-label="Lịch sử">
           ←
         </Link>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Chỉnh sửa bài kiểm tra</h1>
-          <p className="text-gray-500">Sửa lỗi AI, thêm câu hỏi</p>
+          <h1 className="text-2xl font-bold text-slate-950">Chỉnh sửa bài kiểm tra</h1>
+          <p className="text-slate-500">Sửa lỗi AI, thêm câu hỏi</p>
         </div>
       </header>
 
       {error && (
-        <div className="mb-6 rounded-2xl bg-red-50 px-4 py-3 text-sm text-red-800 border border-red-200">
+        <div className="mb-6 rounded-[24px] border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
           {error}
         </div>
       )}
 
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-semibold text-gray-900 mb-2">Tiêu đề</label>
+          <label className="block text-sm font-semibold text-slate-950 mb-2">Tiêu đề</label>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+            className="input-field text-lg"
             placeholder="Nhập tiêu đề đề thi"
           />
         </div>
 
         <div>
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-semibold">Câu hỏi ({questions.length})</h2>
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-4">
+            <h2 className="text-lg font-semibold text-slate-950">Câu hỏi ({questions.length})</h2>
             <button
               onClick={addQuestion}
-              className="rounded-xl bg-green-500 px-4 py-2 text-white font-medium hover:bg-green-600"
+              className="btn-primary"
             >
               + Thêm câu
             </button>
           </div>
+
           <div className="space-y-4">
             {questions.map((q, index) => (
-              <div key={q.id} className="border border-gray-200 rounded-2xl p-6 bg-white hover:shadow-md">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="font-semibold text-gray-900">Câu {q.id}</h3>
+              <div key={q.id} className="card p-6 transition duration-200 hover:-translate-y-0.5 hover:shadow-soft">
+                <div className="flex items-center justify-between mb-4 gap-4">
+                  <h3 className="font-semibold text-slate-950">Câu {q.id}</h3>
                 </div>
-                
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium mb-1">Câu hỏi</label>
+                    <label className="block text-sm font-medium mb-1 text-slate-900">Câu hỏi</label>
                     <textarea
                       value={q.question}
                       onChange={(e) => updateQuestion(index, 'question', e.target.value)}
                       rows={3}
-                      className="w-full rounded-xl border border-gray-200 p-3 focus:border-blue-500 focus:ring-1"
+                      className="input-field"
                       placeholder="Nhập nội dung câu hỏi"
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
-                    {(['A', 'B', 'C', 'D'] as OptionKey[]).map(opt => (
+                    {(['A', 'B', 'C', 'D'] as OptionKey[]).map((opt) => (
                       <div key={opt}>
-                        <label className="block text-xs font-medium mb-1">{opt}</label>
+                        <label className="block text-xs font-medium mb-1 text-slate-700">{opt}</label>
                         <input
                           value={q.options[opt]}
                           onChange={(e) => updateQuestion(index, 'options', {
                             ...q.options,
-                            [opt]: e.target.value
+                            [opt]: e.target.value,
                           })}
-                          className="w-full rounded-xl border border-gray-200 px-3 py-2 focus:border-blue-500"
+                          className="input-field"
                           placeholder={`Đáp án ${opt}`}
                         />
                       </div>
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-4">
-                    <label className="text-sm font-medium">Đáp án đúng:</label>
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                    <label className="text-sm font-medium text-slate-900">Đáp án đúng:</label>
                     <select
                       value={q.correct}
                       onChange={(e) => updateQuestion(index, 'correct', e.target.value as OptionKey)}
-                      className="rounded-xl border border-gray-200 px-3 py-2 focus:border-blue-500"
+                      className="input-field max-w-[180px]"
                     >
                       <option value="A">A</option>
                       <option value="B">B</option>
@@ -183,12 +182,12 @@ export function EditQuizPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm text-gray-600 mb-1">Giải thích (tùy chọn)</label>
+                    <label className="block text-sm text-slate-600 mb-1">Giải thích (tùy chọn)</label>
                     <textarea
                       value={q.explanation}
                       onChange={(e) => updateQuestion(index, 'explanation', e.target.value)}
                       rows={2}
-                      className="w-full rounded-xl border border-gray-200 p-3 focus:border-blue-500"
+                      className="input-field"
                       placeholder="Giải thích đáp án đúng..."
                     />
                   </div>
@@ -198,18 +197,18 @@ export function EditQuizPage() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3 pt-4">
+        <div className="flex flex-col gap-3 sm:flex-row pt-4">
           <button
             onClick={handleSave}
             disabled={saving || !title.trim()}
-            className="flex-1 rounded-2xl bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+            className="btn-primary disabled:bg-slate-300 disabled:text-slate-700 disabled:cursor-not-allowed"
           >
             {saving ? 'Đang lưu...' : 'Lưu thay đổi'}
           </button>
           <button
             onClick={handlePlay}
             disabled={!questions.length}
-            className="flex-1 rounded-2xl bg-green-600 px-6 py-3 text-white font-semibold hover:bg-green-700 disabled:bg-gray-400"
+            className="btn-secondary disabled:opacity-50"
           >
             Chơi bài (preview)
           </button>

@@ -74,7 +74,7 @@ export function ScanPage() {
   }
 
   return (
-    <div className="mx-auto max-w-lg px-4 pb-28 pt-6">
+    <div className="mx-auto max-w-lg px-4 pb-28 pt-6 fade-in-up">
       <header className="mb-6 flex items-center gap-3">
         <button
           type="button"
@@ -101,11 +101,11 @@ export function ScanPage() {
 
       {step === 'camera' ? (
         <>
-          <div className="mb-6 rounded-3xl border border-gray-200 bg-white p-4 shadow-sm">
+          <div className="card mb-6 p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <h2 className="text-sm font-semibold text-gray-900">Cài đặt</h2>
-                <p className="mt-1 text-xs text-gray-500">
+                <h2 className="text-sm font-semibold text-slate-950">Cài đặt</h2>
+                <p className="mt-1 text-xs text-slate-500">
                   Ẩn bớt tùy chọn nâng cao để giao diện gọn hơn.
                 </p>
               </div>
@@ -118,16 +118,16 @@ export function ScanPage() {
               </button>
             </div>
 
-            <label className="mt-4 flex items-center justify-between rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-800">
+            <label className="mt-4 flex items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-800">
               <span>Tiền xử lý ảnh trước khi gửi OCR</span>
               <input
                 type="checkbox"
                 checked={preprocessEnabled}
                 onChange={(e) => setPreprocessEnabled(e.target.checked)}
-                className="h-4 w-4 rounded border-gray-300 text-[#3B82F6]"
+                className="h-4 w-4 rounded border-slate-300 text-[#3B82F6]"
               />
             </label>
-            <p className="mt-2 text-xs text-gray-500">
+            <p className="mt-2 text-xs text-slate-500">
               Tắt nếu bạn muốn OCR API xử lý ảnh trực tiếp mà không cần tiền xử lý phụ.
             </p>
           </div>
