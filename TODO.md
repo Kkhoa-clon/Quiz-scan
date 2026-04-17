@@ -1,8 +1,12 @@
-# OCR Removal Task
+# Tiến độ: Setup End-User Hoàn Thành!
 
-## Steps:
-- [x] 1. Remove import and app.use('/ocr') from server/quizFileApi.ts
-- [x] 2. Delete server/ocrProxy.ts
-- [x] 3. Test server (check no errors, /api/ocr 404)
-- [x] 4. Complete task
+## Hoàn thành:
+- ✅ `setup.sh` gốc + `setup-user.bat` mới (end-user Windows).  
+- ✅ Tự detect/cài Node.js (winget), npm ci.  
+- ✅ Hướng dẫn đơn giản: `npm run dev` + `npx cloudflared tunnel --url http://localhost:5173` (public URL).  
+- ✅ Tiếng Việt, no code terms, .bat double-click friendly.  
+
+**Chạy:** Double-click `setup-user.bat` → theo hướng dẫn. Dev ready!
+
+✅ **Done Forever!** 🚀
 
